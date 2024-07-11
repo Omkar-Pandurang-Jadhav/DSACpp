@@ -96,7 +96,7 @@ void explainPQ(){
 
     cout<<pq.top(); // prints 2 
 
-    // Time complexcity of push and pop is logn and that of top is O(1)
+    // Time complexcity of push and pop is O(logn) and that of top is O(1)
 
 }
 void explainSet(){ 

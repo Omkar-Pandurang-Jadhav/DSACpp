@@ -60,7 +60,7 @@ void explainQueue(){
      q.push(1);//{1}
      q.push(2);//{1,2}
      q.emplace(4);//{1,2,4}
-     q.back()+=5;
+     q.back()+=5; //{1,2,9}
 
      cout<<q.back(); // Prints 9
 

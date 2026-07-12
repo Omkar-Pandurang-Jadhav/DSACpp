@@ -374,10 +374,7 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
 
     // dp[i][target] = Can we form 'target'
     // using elements from index 0 to i ?
-    vector<vector<bool>> dp(
-        n,
-        vector<bool>(k + 1, false)
-    );
+    vector<vector<bool>> dp(n,vector<bool>(k + 1, false));
 
     // Sum 0 can always be formed
     for (int i = 0; i < n; i++) {

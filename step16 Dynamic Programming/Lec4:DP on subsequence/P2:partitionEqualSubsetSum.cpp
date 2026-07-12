@@ -231,10 +231,7 @@ public:
 
         int target=sum/2;
 
-        vector<vector<int>> dp(
-            n,
-            vector<int>(target+1,-1)
-        );
+        vector<vector<int>> dp(n,vector<int>(target+1,-1));
 
         return f(n-1,nums,target,dp);
     }
@@ -366,27 +363,15 @@ dp[ind][...]
 
 by
 
-cur[...]
+cur[...] After finishing one row,
 
-After finishing one row,
+simply do prev = cur
 
-simply do
+This reduces the space from O(N × K) to O(K).
 
-prev = cur
+Time Complexity: O(N × K)
 
-This reduces the space from
-
-O(N × K)
-
-to
-
-O(K).
-
-Time Complexity:
-O(N × K)
-
-Space Complexity:
-O(K)
+Space Complexity: O(K)
 
 ---------------------------------------------------------------
 */

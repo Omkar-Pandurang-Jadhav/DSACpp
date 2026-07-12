@@ -139,9 +139,8 @@ O(N)
 auxiliary recursion stack.
 */
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h> 
 const int mod=1e9+7;
-
 int countSubsequences(int ind,vector<int>& arr,int k,vector<vector<int>> &dp){
 	if(ind == 0){
         if(k == 0 && arr[0] == 0) return 2;
@@ -166,3 +165,14 @@ int findWays(vector<int>& arr, int k){
 
 	return countSubsequences(n-1,arr,k,dp);
 }
+int countPartitions(int n, int d, vector<int> &arr) {
+    int total=0;
+
+    for(int i=0;i<n;i++){
+        total+=arr[i];
+    }
+
+    if(total-d<0 || (total-d)%2==1) return 0;
+    return findWays(arr,(total-d)/2);
+}
+
